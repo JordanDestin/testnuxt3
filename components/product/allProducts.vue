@@ -14,6 +14,7 @@ console.log(products.value);
       v-for="product in products.data"
       :key="product.id"
     >
+    <NuxtLink :to="{ path: 'product/' + product.id }">
       <div class="flex flex-col h-full">
         <div class="relative">
           <img
@@ -81,6 +82,7 @@ console.log(products.value);
           <button class="btn btn-primary">Ajouter au panier</button>
         </div>
       </div>
+      </NuxtLink>
     </div>
   </div>
 </template>
